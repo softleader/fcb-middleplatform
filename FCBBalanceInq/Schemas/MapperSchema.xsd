@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xsd:schema xmlns:tibex="http://www.tibco.com/bpel/2007/extensions" xmlns:tns="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1566099541505" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.tibco.com/namespaces/tnt/plugins/generalactivities/mapper/1566099541505">
+  <xsd:complexType name="MapperInput">
+    <xsd:sequence>
+      <xsd:element name="Balance" type="xsd:string"/>
+            <xsd:element name="RqTs" type="xsd:string"/>
+            <xsd:element name="SystemKey" type="xsd:string"/>
+        </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="MapperInput" tibex:source="bw.generalactivities.mapper" type="tns:MapperInput"/>
+  
+  <xsd:complexType name="MapperInput2">
+    <xsd:sequence>
+      <xsd:element name="Balance" type="xsd:string"/>
+            <xsd:element name="RqTs" type="xsd:string"/>
+            <xsd:element name="SystemKey" type="xsd:string"/>
+            <xsd:element name="TxnSeqNo" type="xsd:string"/>
+        </xsd:sequence>
+  </xsd:complexType>
+   <xsd:element name="MapperInput2" type="tns:MapperInput2"/>
+</xsd:schema>

@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/FCBBalanceInq/Service Descriptors/fcbbalanceinq.BalanceInq-BalanceInq.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "FCB91103G_1_RQ"
+    },
+    {
+        "jsonSchemaLocation": "/FCBBalanceInq/Service Descriptors/fcbbalanceinq.BalanceInq-BalanceInq.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "FCB91103G_1_RS"
+    }
+]}

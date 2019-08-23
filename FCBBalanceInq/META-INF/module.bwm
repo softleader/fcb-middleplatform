@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_8KmFUMFlEemyLb967EbFNg" targetNamespace="http://tns.tibco.com/bw/composite/FCBBalanceInq" name="FCBBalanceInq" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_f5zzcMFpEemyLb967EbFNg" name="balanceinq" promote="ComponentBalanceInq/balanceinq">
+    <sca:interface.wsdl xmi:id="_f55TAMFpEemyLb967EbFNg" interface="http://xmlns.example.com/20190818113726PLT#wsdl.interface(balanceinq)" scaext:wsdlLocation="../Processes/fcbbalanceinq/BalanceInq.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_f59kcMFpEemyLb967EbFNg" name="RestService" path="/balanceinq" docBasePath="http://localhost:7777/FCBBalanceInq" docResourcePath="BalanceInq" basePath="/" connector="fcbbalanceinq.BalanceInq" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/fcbbalanceinq.BalanceInq-BalanceInq.json">
+      <operation xmi:id="_f5-ykMFpEemyLb967EbFNg" operationName="post" nickname="post-balanceinq" httpMethod="POST" notes="FCB91103G_1" responseStyle="element" requestStyle="json_root">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_11TckMF4EempxrsxwD9IDA" operationName="get" nickname="get-balanceinq" httpMethod="GET" responseStyle="element">
+        <parameters xmi:id="_TFqYQMF5EempxrsxwD9IDA">
+          <parameterMapping xmi:id="_TFq_UMF5EempxrsxwD9IDA" parameterName="TxID" parameterType="Query" dataType="string"/>
+          <parameterMapping xmi:id="_TSUUMMF5EempxrsxwD9IDA" parameterName="SystemKey" parameterType="Query" dataType="string"/>
+          <parameterMapping xmi:id="_YwZtgMF5EempxrsxwD9IDA" parameterName="TxSeqNo" parameterType="Query" dataType="string"/>
+          <parameterMapping xmi:id="_cZOOUMF5EempxrsxwD9IDA" parameterName="MsgSeqNo" parameterType="Query" dataType="string"/>
+          <parameterMapping xmi:id="_gR6-MMF5EempxrsxwD9IDA" parameterName="CltTimeStamp" parameterType="Query" dataType="string"/>
+          <parameterMapping xmi:id="_hgBwEMF5EempxrsxwD9IDA" parameterName="CustID" parameterType="Query" dataType="string" required="true"/>
+          <parameterMapping xmi:id="_hk9TYMF5EempxrsxwD9IDA" parameterName="UserID" parameterType="Query" dataType="string"/>
+          <parameterMapping xmi:id="_hqHgMMF5EempxrsxwD9IDA" parameterName="AcctNo" parameterType="Query" dataType="string" required="true"/>
+          <parameterMapping xmi:id="_mbOewMF5EempxrsxwD9IDA" parameterName="InqType" parameterType="Query" dataType="string" required="true"/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_f6HVcMFpEemyLb967EbFNg"/>
+      <advancedConfig xmi:id="_f59kccFpEemyLb967EbFNg" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_f5-ykcFpEemyLb967EbFNg" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_8b87EMFlEemyLb967EbFNg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8cBMgMFlEemyLb967EbFNg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8cCaoMFlEemyLb967EbFNg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8cDowMFlEemyLb967EbFNg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8cE24MFlEemyLb967EbFNg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_8cGFAMFlEemyLb967EbFNg" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_8cHTIMFlEemyLb967EbFNg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_7f3MoMFtEemrqudUVMNNOw" name="BWRestHost" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_-0-HQMFtEemrqudUVMNNOw" name="BWRestPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_DcRkEMVUEemwCoTqCEUxIw" name="HTTPPool" type="XMLSchema:int" scaext:simpleValue="" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_f5tFwMFpEemyLb967EbFNg" name="ComponentBalanceInq" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_f5tFwcFpEemyLb967EbFNg" processName="fcbbalanceinq.BalanceInq"/>
+    <sca:service xmi:id="_f5wJEMFpEemyLb967EbFNg" name="balanceinq">
+      <sca:interface.wsdl xmi:id="_f5xXMMFpEemyLb967EbFNg" interface="http://xmlns.example.com/20190818113726PLT#wsdl.interface(balanceinq)" scaext:wsdlLocation="../Processes/fcbbalanceinq/BalanceInq.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

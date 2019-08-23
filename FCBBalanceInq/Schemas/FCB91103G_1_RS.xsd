@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	 xmlns="FCB91103G_1_RS"
+	 targetNamespace="FCB91103G_1_RS"
+	 elementFormDefault="qualified"
+	 attributeFormDefault="unqualified">
+	<xs:element name="XML">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TxID" type="xs:string"/>
+							<xs:element name="SystemKey" type="xs:string"/>
+							<xs:element name="TxSeqNo" type="xs:string"/>
+							<xs:element name="MsgSeqNo" type="xs:string"/>
+							<xs:element name="CltTimeStamp" type="xs:string"/>
+							<xs:element name="CustID" type="xs:string"/>
+							<xs:element name="UserID" type="xs:string"/>
+							<xs:element name="AcctNo" type="xs:string"/>
+							<xs:element name="SvrTimeStamp" type="xs:string"/>
+							<xs:element name="MsgDirection" type="xs:string"/>
+							<xs:element name="System" type="xs:string"/>
+							<xs:element name="StatusCode" type="xs:string"/>
+							<xs:element name="StatusDesc" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TxRs">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AcctNo" type="xs:string"/>
+							<xs:element name="TxDate" type="xs:string"/>
+							<xs:element name="TxTime" type="xs:string"/>
+							<xs:element name="PBBalSign" type="xs:string"/>
+							<xs:element name="PBBalAmt" type="xs:string"/>
+							<xs:element name="UnusedBal" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

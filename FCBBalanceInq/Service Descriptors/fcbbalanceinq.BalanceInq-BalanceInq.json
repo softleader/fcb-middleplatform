@@ -1,0 +1,171 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "Summary about the new REST service.",
+    "description" : "Summary about the new REST service."
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/balanceinq" : {
+      "post" : {
+        "summary" : "",
+        "description" : "FCB91103G_1",
+        "operationId" : "post-balanceinq",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/XML"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a XML to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/XML"
+            }
+          }
+        }
+      },
+      "get" : {
+        "summary" : "",
+        "description" : "",
+        "operationId" : "get-balanceinq",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "CltTimeStamp",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "MsgSeqNo",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "CustID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "UserID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "TxID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "AcctNo",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "InqType",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : true
+        }, {
+          "name" : "SystemKey",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "TxSeqNo",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a XML to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/XML"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Header" : {
+      "type" : "object",
+      "required" : [ "CltTimeStamp", "MsgSeqNo", "CustID", "UserID", "MsgDirection", "TxID", "AcctNo", "SystemKey", "TxSeqNo" ],
+      "properties" : {
+        "TxID" : {
+          "type" : "string"
+        },
+        "SystemKey" : {
+          "type" : "string"
+        },
+        "TxSeqNo" : {
+          "type" : "string"
+        },
+        "MsgSeqNo" : {
+          "type" : "string"
+        },
+        "CltTimeStamp" : {
+          "type" : "string"
+        },
+        "CustID" : {
+          "type" : "string"
+        },
+        "UserID" : {
+          "type" : "string"
+        },
+        "AcctNo" : {
+          "type" : "string"
+        },
+        "MsgDirection" : {
+          "type" : "string"
+        }
+      }
+    },
+    "TxRq" : {
+      "type" : "object",
+      "required" : [ "CustID", "AcctNo", "InqType" ],
+      "properties" : {
+        "AcctNo" : {
+          "type" : "string"
+        },
+        "CustID" : {
+          "type" : "string"
+        },
+        "InqType" : {
+          "type" : "string"
+        }
+      }
+    },
+    "XML" : {
+      "type" : "object",
+      "required" : [ "Header", "TxRq" ],
+      "properties" : {
+        "Header" : {
+          "$ref" : "#/definitions/Header"
+        },
+        "TxRq" : {
+          "$ref" : "#/definitions/TxRq"
+        }
+      }
+    }
+  }
+}

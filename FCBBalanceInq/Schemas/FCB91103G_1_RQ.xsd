@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<xs:schema xmlns="FCB91103G_1_RQ" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="FCB91103G_1_RQ">
+	<xs:element name="XML">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Header">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="TxID" type="xs:string"/>
+							<xs:element name="SystemKey" type="xs:string"/>
+							<xs:element name="TxSeqNo" type="xs:string"/>
+							<xs:element name="MsgSeqNo" type="xs:string"/>
+							<xs:element name="CltTimeStamp" type="xs:string"/>
+							<xs:element name="CustID" type="xs:string"/>
+							<xs:element name="UserID" type="xs:string"/>
+							<xs:element name="AcctNo" type="xs:string"/>
+							<xs:element name="MsgDirection" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="TxRq">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AcctNo" type="xs:string"/>
+							<xs:element name="CustID" type="xs:string"/>
+							<xs:element name="InqType" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Request">
+		<xs:complexType>
+			<xs:sequence>
+				
+							<xs:element name="TxID" type="xs:string"/>
+							<xs:element name="SystemKey" type="xs:string"/>
+							<xs:element name="TxSeqNo" type="xs:string"/>
+							<xs:element name="MsgSeqNo" type="xs:string"/>
+							<xs:element name="CltTimeStamp" type="xs:string"/>
+							<xs:element name="CustID" type="xs:string"/>
+							<xs:element name="UserID" type="xs:string"/>
+							<xs:element name="AcctNo" type="xs:string"/>
+							<xs:element name="MsgDirection" type="xs:string"/>
+
+							<xs:element name="AcctNo" type="xs:string"/>
+							<xs:element name="CustID" type="xs:string"/>
+							<xs:element name="InqType" type="xs:string"/>
+					
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+    <xs:complexType name="XMLArray">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" ref="XML"/>
+    </xs:sequence>
+  </xs:complexType>
+    <xs:element name="XMLArray" type="XMLArray"/>
+</xs:schema>
