@@ -1,0 +1,5 @@
+FROM tibco/bwce245:latest
+MAINTAINER Tibco
+ADD  FCBPOC.application_1.0.0.ear /
+EXPOSE 8080
+ENV BW_ENGINE_THREADCOUNT=16
